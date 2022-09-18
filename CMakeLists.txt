@@ -1,11 +1,16 @@
-cmake_minimum_required(VERSION 3.16.0)
+cmake_minimum_required(VERSION 3.16)
 
 include(cmake/tictactoecpp.version.cmake)
 
 set(CMAKE_CXX_STANDARD 20)
 
-message(STATUS "VERSION: ${TICTACTOE_CPP_VERSION}")
 project(tictactoecpp-app LANGUAGES CXX VERSION ${TICTACTOE_CPP_VERSION})
 message(STATUS "Configuring ${PROJECT_NAME}:${TICTACTOE_CPP_VERSION}")
 
+add_subdirectory(src/helpers)
+
 add_executable(tictactoecpp src/main.cpp)
+
+target_link_libraries(tictactoecpp
+    cli_lib
+)

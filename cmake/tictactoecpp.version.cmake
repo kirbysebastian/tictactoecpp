@@ -15,5 +15,4 @@ set(__tttcpp_patch__ 0)
 
 
 set(TICTACTOE_CPP_VERSION "${__tttcpp_major__}.${__tttcpp_minor__}.${__tttcpp_patch__}")
-message(STATUS "TICTACTOE_CPP_VERSION: ${TICTACTOE_CPP_VERSION}")
 

@@ -12,5 +12,9 @@ add_subdirectory(src/helpers)
 add_executable(tictactoecpp src/main.cpp)
 
 target_link_libraries(tictactoecpp
-    cli_lib
+    cli-lib
+)
+
+target_include_directories(tictactoecpp PRIVATE
+    include
 )
